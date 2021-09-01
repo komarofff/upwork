@@ -12,13 +12,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap"
           rel="stylesheet">
     <style>
-        body{
+        body {
             max-width: 1980px;
             margin: 0 auto;
         }
-        div, section {
-            border: 1px solid red;
-        }
+
+        /*div, section {*/
+        /*    border: 1px solid red;*/
+        /*}*/
 
         html {
             font-family: 'Inter';
@@ -34,21 +35,30 @@
 <body>
 <section class="container min-w-full mx-auto">
     <div class="container min-w-full flex justify-between">
-        <div class="w-9/12 p-4">
+        <div class="w-9/12 py-4 pl-6 pr-4">
             <div class="w-full flex justify-between">
                 <div class="w-4/12 flex justify-start items-start">
                     <img class="relative mt-2" src="images/vasterra-logo.svg" alt="vasterra-logo">
-                    <a href="#" class="mx-4 pt-1 text-gray-500 mt-2">Jobs</a>
-                    <a href="#" class="pt-1 mt-2">Lidgens</a>
+                    <a href="#" class="mx-4 pt-1 text-gray-400 mt-2 hover:text-gray-400">Jobs</a>
+                    <a   href="#" class="pt-1 mt-2 hover:text-gray-400">Lidgens</a>
 
                 </div>
                 <div class="w-4/12 flex justify-end items-start">
-                    <div class="flex justify-end items-center">
+                    <div class="flex justify-end items-center relative">
                         <img class="w-12" src="images/user.png" alt="user">
-                        <p class="flex justify-center items-center">
-                            <a class="ml-2" href="#">Artem</a>
-                            <img class="ml-1 mt-1" src="images/arrow-down.svg" alt="arrow down">
+                        <p class="flex justify-center items-center ">
+                            <span class="ml-2" href="#">Artem</span>
+                            <img class="ml-1 mt-1 cursor-pointer link-image" src="images/arrow-down.svg" alt="arrow down">
                         </p>
+                        <div class="absolute top-10 left-6 w-40 bg-white rounded-2xl shadow-2xl hidden dropdown" >
+                            <ul class="p-4">
+                                <li class="my-4"><a class="hover:text-gray-400" href="#">Profile</a></li>
+                                <li><a class="hover:text-gray-400" href="#">Setting filteres</a></li>
+                                <hr class="mt-6 mb-2 min-w-full">
+                                <li><a class="hover:text-gray-400" href="#">Log out</a></li>
+
+                            </ul>
+                        </div>
                     </div>
 
                 </div>
@@ -107,6 +117,18 @@
         <div class="w-2/12"> calendar</div>
     </div>
 </section>
-
+<script>
+    flag = true
+   document.querySelector(".link-image").addEventListener("click",()=>{
+       if(flag) {
+           document.querySelector('.dropdown').classList.remove('hidden')
+           flag = !flag
+       }
+       else {
+           document.querySelector('.dropdown').classList.add('hidden')
+           flag = !flag
+       }
+    })
+</script>
 </body>
 </html>

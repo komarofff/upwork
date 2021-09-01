@@ -40,7 +40,7 @@
                 <div class="w-4/12 flex justify-start items-start">
                     <img class="relative mt-2" src="images/vasterra-logo.svg" alt="vasterra-logo">
                     <a href="#" class="mx-4 pt-1 text-gray-400 mt-2 hover:text-gray-400">Jobs</a>
-                    <a   href="#" class="pt-1 mt-2 hover:text-gray-400">Lidgens</a>
+                    <a href="#" class="pt-1 mt-2 hover:text-gray-400">Lidgens</a>
 
                 </div>
                 <div class="w-4/12 flex justify-end items-start">
@@ -48,9 +48,10 @@
                         <img class="w-12" src="images/user.png" alt="user">
                         <p class="flex justify-center items-center ">
                             <span class="ml-2" href="#">Artem</span>
-                            <img class="ml-1 mt-1 cursor-pointer link-image" src="images/arrow-down.svg" alt="arrow down">
+                            <img class="ml-1 mt-1 cursor-pointer link-image" src="images/arrow-down.svg"
+                                 alt="arrow down">
                         </p>
-                        <div class="absolute top-10 left-6 w-40 bg-white rounded-2xl shadow-2xl hidden dropdown" >
+                        <div class="absolute top-10 left-6 w-40 bg-white rounded-2xl shadow-2xl hidden dropdown">
                             <ul class="p-4">
                                 <li class="my-4"><a class="hover:text-gray-400" href="#">Profile</a></li>
                                 <li><a class="hover:text-gray-400" href="#">Setting filteres</a></li>
@@ -98,13 +99,20 @@
                     </div>
                 </div>
             </div>
-            <div class="w-full my-12">
-                lidgens
-            </div>
+            <div class="w-full my-12 flex justify-between items-center nowrap">
+                <div class="flex justify-start items-center nowrap">
+                <a href="#" class="rounded rounded-full bg-gray-500 text-white py-3 px-4 hover:bg-gray-700 mr-7">Create Kit</a>
+                <p class="bg-gray-200 text-black rounded py-3 px-2 font-normal mx-4"><span class="py-2 px-3">Artem</span><span class="cursor-pointer py-2 px-3 border-l border-gray-400">...</span></p>
+                <p class="bg-gray-200 text-black rounded py-3 px-2 font-normal mx-4"><span class="py-2 px-3">Boris</span><span class="cursor-pointer py-2 px-3 border-l border-gray-400">...</span></p>
+                <p class="bg-gray-200 text-black rounded py-3 px-2 font-normal mx-4"><span class="py-2 px-3">Alena</span><span class="cursor-pointer py-2 px-3 border-l border-gray-400">...</span></p>
+                <p class="bg-gray-200 text-black rounded py-3 px-2 font-normal mx-4"><span class="py-2 px-3">Petr</span><span class="cursor-pointer py-2 px-3 border-l border-gray-400">...</span></p>
+                </div>
+                <div class="flex nowrap"><input type="text" class=" search-input hidden border rounded-lg border-gray-400 text-black p-2 mx-4 outline-none"><img class="cursor-pointer search" src="images/search.svg" alt="search"></div>
+                </div>
             <div class="w-full ">
                 <p class="text-lg font-bold">Find 235 jobs</p>
             </div>
-            <div class="w-full p-7 border-1 border-gray-300 rounded my-6">
+            <div class="w-full p-7 border border-gray-300 rounded-md my-6">
                 <div class="w-full mb-7">1</div>
                 <div class="w-full mb-5">2</div>
                 <div class="w-full mb-8">3</div>
@@ -114,20 +122,31 @@
             </div>
 
         </div>
-        <div class="w-2/12"> calendar</div>
+        <div class="w-2/12 border-2 border-red-500 min-h-screen">
+            calendar
+        </div>
     </div>
 </section>
 <script>
     flag = true
-   document.querySelector(".link-image").addEventListener("click",()=>{
-       if(flag) {
-           document.querySelector('.dropdown').classList.remove('hidden')
-           flag = !flag
-       }
-       else {
-           document.querySelector('.dropdown').classList.add('hidden')
-           flag = !flag
-       }
+    document.querySelector(".link-image").addEventListener("click", () => {
+        if (flag) {
+            document.querySelector('.dropdown').classList.remove('hidden')
+            flag = !flag
+        } else {
+            document.querySelector('.dropdown').classList.add('hidden')
+            flag = !flag
+        }
+    })
+    flag2 = true
+    document.querySelector(".search").addEventListener("click", () => {
+        if (flag2) {
+            document.querySelector('.search-input').classList.remove('hidden')
+            flag2 = !flag2
+        } else {
+            document.querySelector('.search-input').classList.add('hidden')
+            flag2 = !flag2
+        }
     })
 </script>
 </body>

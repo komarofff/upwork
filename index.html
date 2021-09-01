@@ -172,52 +172,14 @@
 
 
 
-            <div class="w-full p-7 border border-gray-300 rounded-md my-6 relative">
-                <img class="cursor-pointer absolute top-6 right-6" src="images/close.svg" alt="close">
-                <div class="w-11/12 mb-7 flex justify-between items-center">
-                    <p>
-                        <span class="text-green-500 font-bold text-2xl mr-4  border-b border-gray-300">Article on “BTS Quiz”</span>
-                        <span class="text-black font-bold text-2xl">Score: 85%</span>
-                    </p>
-                    <p>
-                        <span class="text-gray-400 font-normal">Posted: 08.04.2021 10:13:38</span>
-                    </p>
-                </div>
-                <div class="w-11/12 mb-5">
-                    <p class="leading-7 text-lg font-normal ">
-                        Looking for a written who can write an article on BTS quiz with answers. The article should be
-                        1000-1200 words long or more. You’ll have to write original content, do not copy the referenced
-                        article. Please come up with creative titles and headlines for the article. The article should
-                        be formatted in the following manner: Intro Paragraph - 40 BTS quiz with Answers (In Multiple
-                        choice) Reference article^ www.buzzfeed.com/jennaguillame,bts
-                    </p>
-                </div>
-                <div class="w-11/12 mb-8 flex justify-start items-center">
-                    <p class="cursor-pointer hover:bg-green-500 hover:text-white bg-gray-200 text-black rounded py-3 px-2 font-normal mx-4"><span
-                            class="py-2 px-3">Project Management</span></p>
-                    <p class="cursor-pointer hover:bg-green-500 hover:text-white bg-gray-200 text-black rounded py-3 px-2 font-normal mx-4"><span
-                            class="py-2 px-3">Bandits</span></p>
-                    <p class="cursor-pointer hover:bg-green-500 hover:text-white bg-gray-200 text-black rounded py-3 px-2 font-normal mx-4"><span
-                            class="py-2 px-3">Data Analytics</span></p>
 
-                </div>
-                <div class="w-11/12 mb-8">4</div>
-                <div class="w-11/12 mb-12">5</div>
-                <div class="w-full flex justify-end items-center">
-                    <a href="#"
-                       class="rounded rounded-full bg-gray-300 text-black py-4 px-9 hover:bg-green-500 hover:text-white mr-7">
-                        Take
-                    </a>
-                    <a href="#"
-                       class="rounded rounded-full bg-gray-300 text-black py-4 px-9 hover:bg-green-500 hover:text-white ">
-                        Think
-                    </a>
-
-                </div>
-            </div>
         </div>
-        <div class="w-2/12  min-h-screen bg-black text-white fixed top-0 right-0 z-20">
-            calendar
+        <div class="w-2/12  relative">
+            <img class="cursor-pointer calendar-switcher absolute -left-4 top-1/2" src="images/arrow-right.svg" alt="arrow-right">
+            <div class="w-2/12  calendar min-h-screen bg-black text-white fixed top-0 right-0 z-20 ">
+                calendar
+            </div>
+
         </div>
     </div>
 </section>
@@ -255,6 +217,23 @@
         }
     })
 
+
+    flag2 = true
+    document.querySelector(".calendar-switcher").addEventListener("click", () => {
+        if (flag2) {
+            document.querySelector('.calendar').classList.add('hidden')
+            document.querySelector('.calendar-switcher').src='images/arrow-left.svg'
+            document.querySelector('.calendar-switcher').classList.remove('-left-4')
+            document.querySelector('.calendar-switcher').classList.add('right-0')
+            flag2 = !flag2
+        } else {
+            document.querySelector('.calendar').classList.remove('hidden')
+            document.querySelector('.calendar-switcher').src='images/arrow-right.svg'
+            document.querySelector('.calendar-switcher').classList.remove('right-0')
+            document.querySelector('.calendar-switcher').classList.add('-left-4')
+            flag2 = !flag2
+        }
+    })
 </script>
 </body>
 </html>

@@ -38,7 +38,7 @@
 
     </style>
 </head>
-<body class="relative">
+<body class="relative overflow-x-hidden">
 <section class="container min-w-full mx-auto">
     <div class="container min-w-full flex justify-between">
         <div class="w-9/12 py-4 pl-6 pr-4">
@@ -205,10 +205,10 @@
 
 
         </div>
-        <div class="w-2/12 calendar-block relative min-h-screen z-40">
+        <div class="w-2/12 calendar-block relative min-h-full z-40">
 
-            <div class="w-full  calendar  bg-black text-white absolute top-0 right-0  ">
-                <div class="slick-slider">
+            <div class="w-full  calendar  bg-black text-white absolute top-0 right-0 overflow-y-scroll  max-h-screen">
+                <div class="slick-slider34">
                     <div>
                         <div class="rounded-lg bg-red-700 text-white text-base flex justify-between items-start mx-4 my-6 pt-3 pb-6 px-3 cursor-pointer to-delete relative">
                             <div>1- 10:00</div>
@@ -564,6 +564,7 @@
     big calendar
 </section>
 <script>
+
     // top menu dropdown menu show-close
     let flag = true
     document.querySelector(".link-image").addEventListener("click", () => {

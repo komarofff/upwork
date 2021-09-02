@@ -154,7 +154,7 @@
                             class="py-2 px-3">Data Analytics</span></p>
 
                 </div>
-                <div class="w-11/12 mb-8 flex nowrap justify-start items-start text-sm">
+                <div class="w-11/12 mb-8 flex nowrap justify-start items-start text-md leading-6 ">
                     <div class="w-4/12 flex flex-col justify-start items-start">
                         <p><span class="font-bold">Country:</span> USA</p>
                         <p><span class="font-bold">Category:</span> Content & Copywriting</p>
@@ -163,21 +163,25 @@
 
                     </div>
                     <div class="w-4/12 flex flex-col justify-start items-start">
-                        <p><span class="font-bold">Country:</span> USA</p>
-                        <p><span class="font-bold">Category:</span> Content & Copywriting</p>
-                        <p><span class="font-bold">Payment Verified:</span> Yes</p>
-                        <p><span class="font-bold">Jobs posted:</span> 84</p>
+                        <p><span class="font-bold">Hires:</span> 82</p>
+                        <p><span class="font-bold">Hire Rate:</span>98%</p>
+                        <p><span class="font-bold">Total feedbacks:</span> 58</p>
+                        <p><span class="font-bold">Feedbacks score:</span> 5.00</p>
                     </div>
                     <div class="w-4/12 flex flex-col justify-start items-start">
-                        <p><span class="font-bold">Country:</span> USA</p>
-                        <p><span class="font-bold">Category:</span> Content & Copywriting</p>
-                        <p><span class="font-bold">Payment Verified:</span> Yes</p>
-                        <p><span class="font-bold">Jobs posted:</span> 84</p>
+                        <p><span class="font-bold">Spent:</span> $20000</p>
+                        <p><span class="font-bold">Hours:</span> 1031</p>
+                        <p><span class="font-bold">Avg Rate (based on last 6 month):</span> $22.86/h</p>
+                        <p><span class="font-bold">Member since:</span>April 24, 2015</p>
                     </div>
 
 
                 </div>
-                <div class="w-11/12 mb-12">5</div>
+                <div class="w-11/12 mb-12">
+                    <p><span
+                            class="text-green-500 text-lg border-b-2  border-green-500 border-dotted cursor-pointer whitespace-nowrap">Show Feedbacks (3)</span>
+                    </p>
+                </div>
                 <div class="w-full flex justify-end items-center">
                     <a href="#"
                        class="rounded rounded-full bg-gray-300 text-black py-3 px-9 hover:bg-green-500 hover:text-white mr-7">
@@ -202,6 +206,58 @@
 
         </div>
     </div>
+</section>
+
+<section id="create-kit" class="w-full bg-white p-8 z-40 border border-red-500">
+    <div class="flex justify-between items-center mb-8">
+        <p class="text-2xl text-black font-bold">Create Kit</p>
+        <img class="close-kit" src="images/close.svg" alt="close">
+    </div>
+    <div class="mb-8">
+        <p class="text-lg font-bold text-black mb-3">Countries</p>
+        <div class="flex wrap justify-start items-start">
+            <button class="cursor-pointer hover:shadow-lg  bg-gray-200 text-black rounded py-3 px-4 font-normal mr-2 active-button">
+                All country
+            </button>
+            <button class="cursor-pointer hover:shadow-lg  bg-gray-200 text-black rounded py-3 px-4 font-normal mr-2 active-button">
+                USA
+            </button>
+            <button class="cursor-pointer hover:shadow-lg  bg-gray-200 text-black rounded py-3 px-4 font-normal mr-2 active-button">
+                United Arab Emirates
+            </button>
+        </div>
+    </div>
+    <div class="mb-8">
+        <p class="text-lg font-bold text-black mb-3">Categories</p>
+        <div class="flex wrap justify-start items-start">
+            <button class="cursor-pointer hover:shadow-lg  bg-gray-200 text-black rounded py-3 px-4 font-normal mr-2 active-button">
+                All filters
+            </button>
+            <button class="cursor-pointer hover:shadow-lg  bg-gray-200 text-black rounded py-3 px-4 font-normal mr-2 active-button">
+                Project Management
+            </button>
+            <button class="cursor-pointer hover:shadow-lg  bg-gray-200 text-black rounded py-3 px-4 font-normal mr-2 active-button">
+                CMS Customization
+            </button>
+        </div>
+    </div>
+
+    <div class="mb-8">
+        <p class="text-lg font-bold text-black mb-3">Technologies</p>
+        <div class="flex wrap justify-start items-start">
+            <button class="cursor-pointer hover:shadow-lg  bg-gray-200 text-black rounded py-3 px-4 font-normal mr-2 active-button font-bold">
+                PHP
+            </button>
+            <button class="cursor-pointer hover:shadow-lg  bg-gray-200 text-black rounded py-3 px-4 font-normal mr-2 active-button">
+                Laravel
+            </button>
+            <button class="cursor-pointer hover:shadow-lg  bg-gray-200 text-black rounded py-3 px-4 font-normal mr-2 active-button">
+                Zend
+            </button>
+        </div>
+    </div>
+
+
 </section>
 <script>
     let flag = true
@@ -254,6 +310,20 @@
             flag2 = !flag2
         }
     })
+
+    const activeButtons = document.querySelectorAll(".active-button")
+    for (let i = 0; i < activeButtons.length; i++) {
+        activeButtons[i].addEventListener("click", (e) => {
+            //console.log(e.target.classList)
+            if (e.target.classList.contains('bg-green-500') && e.target.classList.contains('text-white')) {
+                e.target.classList.remove('bg-green-500')
+                e.target.classList.remove('text-white')
+            } else {
+                e.target.classList.add('bg-green-500')
+                e.target.classList.add('text-white')
+            }
+        })
+    }
 </script>
 </body>
 </html>

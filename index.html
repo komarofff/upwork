@@ -19,10 +19,6 @@
             margin: 0 auto;
         }
 
-        /*div, section {*/
-        /*    border: 1px solid red;*/
-        /*}*/
-
         html {
             font-family: 'Inter';
             font-style: normal;
@@ -34,6 +30,13 @@
         .calendar::-webkit-scrollbar {
             width: 0;
         }
+        .topmenu-width{
+            max-width: 1980px;
+            left: 50%;
+            transform: translateX(-50%);
+            -webkit-transform: translateX(-50%);
+            -moz-transform: translateX(-50%);
+        }
 
 
     </style>
@@ -42,7 +45,7 @@
 <section class="container min-w-full mx-auto">
     <div class="container min-w-full flex justify-between">
         <div class="w-9/12 py-4 pl-6 pr-4">
-            <div class="w-full flex justify-between fixed top-0 left-0  z-40 bg-white pb-2 topmenu">
+            <div class="w-full flex justify-between fixed top-0 left-0  z-40 bg-white pb-2 topmenu topmenu-width">
                 <div class="w-4/12 flex justify-start items-start ml-4">
                     <img class="relative mt-2" src="images/vasterra-logo.svg" alt="vasterra-logo">
                     <a href="#" class="mx-4 pt-1 text-gray-400 mt-2 hover:text-gray-400">Jobs</a>
@@ -613,6 +616,7 @@
     let flag2 = true
     document.querySelector(".calendar-switcher").addEventListener("click", () => {
         if (flag2) {
+            document.querySelector('.calendar-block').classList.toggle('z-40')
             document.querySelector('.calendar').classList.add('hidden')
             document.querySelector('.calendar-switcher').src = 'images/arrow-left.svg'
             document.querySelector('.calendar-switcher').classList.remove('-left-4')
@@ -624,6 +628,7 @@
             document.querySelector('.topmenu').querySelector(".user-block").classList.add('w-8/12')
             flag2 = !flag2
         } else {
+            document.querySelector('.calendar-block').classList.toggle('z-40')
             document.querySelector('.calendar').classList.remove('hidden')
             document.querySelector('.calendar-switcher').src = 'images/arrow-right.svg'
             document.querySelector('.calendar-switcher').classList.remove('right-0')

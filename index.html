@@ -32,7 +32,7 @@
 
     </style>
 </head>
-<body>
+<body class="relative">
 <section class="container min-w-full mx-auto">
     <div class="container min-w-full flex justify-between">
         <div class="w-9/12 py-4 pl-6 pr-4">
@@ -102,7 +102,7 @@
             </div>
             <div class="w-full my-12 flex justify-between items-center nowrap">
                 <div class="flex justify-start items-center nowrap">
-                    <button class="rounded rounded-full bg-gray-500 text-white py-3 px-4 hover:bg-gray-700 mr-7">Create
+                    <button class="create-kid rounded rounded-full bg-gray-500 text-white py-3 px-4 hover:bg-gray-700 mr-7">Create
                         Kit
                     </button>
                     <button class="cursor-pointer bg-gray-200 text-black rounded  px-3 font-normal mr-6 hover:shadow-lg flex items-center ">
@@ -209,10 +209,10 @@
     </div>
 </section>
 
-<section id="create-kit" class="w-full bg-white p-8 z-40 border border-red-500">
+<section id="create-kit" class="w-full bg-white p-8 hidden ">
     <div class="flex justify-between items-center mb-8">
         <p class="text-2xl text-black font-bold">Create Kit</p>
-        <img class="close-kit" src="images/close.svg" alt="close">
+        <img class="close-kit cursor-pointer" src="images/close.svg" alt="close">
     </div>
     <div class="mb-14">
         <p class="text-lg font-bold text-black mb-3">Countries</p>
@@ -289,16 +289,35 @@
         <p class="text-lg font-bold text-black mb-3">Exception words</p>
         <div class="flex wrap justify-start items-start">
             <button class="cursor-pointer bg-gray-200 text-black rounded  px-3 font-normal mr-4 hover:shadow-lg flex items-center active-button">
-                <p class="mr-2">Artem</p>
-                <p class="  py-4 px-3  border-l-2 border-gray-400"><img src="images/close-little.svg" alt="close-little"></p></button>
+                <p class="mr-2">Word1</p>
+                <p class="  py-4 pl-3 pr-1   border-l border-gray-400"><img class="exception-words" src="images/close-little.svg"
+                                                                            alt="close-little"></p></button>
+            <button class="cursor-pointer bg-gray-200 text-black rounded  px-3 font-normal mr-4 hover:shadow-lg flex items-center active-button">
+                <p class="mr-2">Word2</p>
+                <p class="  py-4 pl-3 pr-1  border-l border-gray-400"><img class="exception-words" src="images/close-little.svg"
+                                                                           alt="close-little"></p></button>
+            <button class="cursor-pointer bg-gray-200 text-black rounded  px-3 font-normal mr-4 hover:shadow-lg flex items-center active-button">
+                <p class="mr-2">Word3</p>
+                <p class="  py-4 pl-3 pr-1 border-l border-gray-400"><img class="exception-words" src="images/close-little.svg"
+                                                                          alt="close-little"></p></button>
         </div>
 
     </div>
-    <div class="mb-12">
-        <button class="rounded rounded-full bg-gray-500 text-white py-3 px-4 hover:bg-gray-700 ">+ Add</button>
+    <div class="mb-24 flex nowrap">
+        <input type="text" placeholder="New word"
+               class=" input-word hidden border rounded-lg border-gray-400 text-black p-2 mr-4 outline-none">
+        <button class="rounded rounded-full bg-gray-500 text-white py-3 px-4 hover:bg-gray-700 add-word">+ Add word</button>
+        <button class="rounded rounded-full bg-gray-500 text-white py-2 px-5 hover:bg-gray-700 save-word-input hidden mr-4">Save</button>
+        <button class="rounded rounded-full bg-gray-500 text-white py-2 px-5 hover:bg-gray-700 close-word-input hidden">Close</button>
     </div>
 
 
+    <div class="flex nowrap mb-12">
+        <input type="text" placeholder="Name kit"
+               class="input-kit border rounded-lg border-gray-400 text-black p-2 mr-4 outline-none">
+
+        <button class="rounded rounded-full bg-gray-500 text-white py-3 px-4 hover:bg-gray-700 ">Save Kit</button>
+    </div>
 </section>
 <script>
     // top menu dropdown menu show-close
@@ -365,6 +384,38 @@
             }
         })
     }
+    // exception words  delete
+    const deleteWords = document.querySelectorAll('.exception-words')
+    for (let i = 0; i < deleteWords.length; i++) {
+        deleteWords[i].addEventListener("click", (e) => {
+            console.log(e.target.parentNode)
+            e.target.parentNode.parentNode.remove()
+        })
+    }
+    // open input for new words
+    document.querySelector(".add-word").addEventListener("click",()=>{
+        document.querySelector('.add-word').classList.add('hidden')
+        document.querySelector('.input-word').classList.remove('hidden')
+        document.querySelector('.close-word-input').classList.remove('hidden')
+        document.querySelector('.save-word-input').classList.remove('hidden')
+    })
+    document.querySelector(".close-word-input").addEventListener("click",()=>{
+        document.querySelector('.add-word').classList.remove('hidden')
+        document.querySelector('.input-word').classList.add('hidden')
+        document.querySelector('.close-word-input').classList.add('hidden')
+        document.querySelector('.save-word-input').classList.add('hidden')
+    })
+    // open-close Kit window
+    document.querySelector('.create-kid').addEventListener('click',()=>{
+        document.querySelector('#create-kit').classList.remove('hidden')
+        document.querySelector('#create-kit').classList.add('z-50', 'absolute', 'top-0','left-0','right-0')
+    })
+    document.querySelector('.close-kit').addEventListener('click',()=>{
+        document.querySelector('#create-kit').classList.add('hidden')
+        document.querySelector('#create-kit').classList.remove('z-50', 'absolute', 'top-0','left-0','right-0')
+    })
+
+
 </script>
 </body>
 </html>

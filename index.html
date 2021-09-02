@@ -43,7 +43,7 @@
                     <a href="#" class="pt-1 mt-2 hover:text-gray-400">Lidgens</a>
 
                 </div>
-                <div class="w-5/12 flex justify-end items-center mr-9">
+                <div class="w-5/12 flex justify-end items-center mr-9 user-block">
                     <div class="flex justify-end items-center relative">
                         <img class="w-12" src="images/user.png" alt="user">
                         <p class="flex justify-center items-center ">
@@ -63,7 +63,7 @@
                     </div>
 
                 </div>
-                <div class="w-3/12 "></div>
+                <div class="w-3/12 last-block"></div>
             </div>
             <div class="w-full flex nowrap mb-8 mt-20">
                 <div class="w-4/12 xl:w-3/12">
@@ -290,25 +290,22 @@
         <div class="flex wrap justify-start items-start">
             <button class="cursor-pointer bg-gray-200 text-black rounded  px-3 font-normal mr-4 hover:shadow-lg flex items-center active-button">
                 <p class="mr-2">Word1</p>
-                <p class="  py-4 pl-3 pr-1   border-l border-gray-400"><img class="exception-words" src="images/close-little.svg"
-                                                                            alt="close-little"></p></button>
+                <p class="  py-2 pl-3 pr-1 border-l border-gray-400 exception-words text-2xl" title="Delete word">×</p></button>
             <button class="cursor-pointer bg-gray-200 text-black rounded  px-3 font-normal mr-4 hover:shadow-lg flex items-center active-button">
                 <p class="mr-2">Word2</p>
-                <p class="  py-4 pl-3 pr-1  border-l border-gray-400"><img class="exception-words" src="images/close-little.svg"
-                                                                           alt="close-little"></p></button>
+                <p class="  py-2 pl-3 pr-1 border-l border-gray-400 exception-words text-2xl" title="Delete word">×</p></button>
             <button class="cursor-pointer bg-gray-200 text-black rounded  px-3 font-normal mr-4 hover:shadow-lg flex items-center active-button">
                 <p class="mr-2">Word3</p>
-                <p class="  py-4 pl-3 pr-1 border-l border-gray-400"><img class="exception-words" src="images/close-little.svg"
-                                                                          alt="close-little"></p></button>
+                <p class=" py-2 pl-3 pr-1 border-l border-gray-400 exception-words text-2xl" title="Delete word">×</p></button>
         </div>
 
     </div>
-    <div class="mb-24 flex nowrap">
+    <div class="mb-12 flex nowrap">
         <input type="text" placeholder="New word"
                class=" input-word hidden border rounded-lg border-gray-400 text-black p-2 mr-4 outline-none">
         <button class="rounded rounded-full bg-gray-500 text-white py-3 px-4 hover:bg-gray-700 add-word">+ Add word</button>
-        <button class="rounded rounded-full bg-gray-500 text-white py-2 px-5 hover:bg-gray-700 save-word-input hidden mr-4">Save</button>
-        <button class="rounded rounded-full bg-gray-500 text-white py-2 px-5 hover:bg-gray-700 close-word-input hidden">Close</button>
+        <button class="rounded rounded-full bg-gray-500 text-white py-3 px-5 hover:bg-gray-700 save-word-input hidden mr-4">Save</button>
+        <button class="rounded rounded-full bg-gray-500 text-white py-3 px-5 hover:bg-gray-700 close-word-input hidden">Close</button>
     </div>
 
 
@@ -362,12 +359,22 @@
             document.querySelector('.calendar-switcher').src = 'images/arrow-left.svg'
             document.querySelector('.calendar-switcher').classList.remove('-left-4')
             document.querySelector('.calendar-switcher').classList.add('right-0')
+            // add to top menu full width
+            document.querySelector('.topmenu').querySelector(".last-block").classList.remove('w-3/12')
+            document.querySelector('.topmenu').querySelector(".last-block").classList.add('w-0')
+            document.querySelector('.topmenu').querySelector(".user-block").classList.remove('w-5/12')
+            document.querySelector('.topmenu').querySelector(".user-block").classList.add('w-8/12')
             flag2 = !flag2
         } else {
             document.querySelector('.calendar').classList.remove('hidden')
             document.querySelector('.calendar-switcher').src = 'images/arrow-right.svg'
             document.querySelector('.calendar-switcher').classList.remove('right-0')
             document.querySelector('.calendar-switcher').classList.add('-left-4')
+            // delete from top menu full width
+            document.querySelector('.topmenu').querySelector(".last-block").classList.add('w-3/12')
+            document.querySelector('.topmenu').querySelector(".last-block").classList.remove('w-0')
+            document.querySelector('.topmenu').querySelector(".user-block").classList.add('w-5/12')
+            document.querySelector('.topmenu').querySelector(".user-block").classList.remove('w-8/12')
             flag2 = !flag2
         }
     })
@@ -388,8 +395,7 @@
     const deleteWords = document.querySelectorAll('.exception-words')
     for (let i = 0; i < deleteWords.length; i++) {
         deleteWords[i].addEventListener("click", (e) => {
-            console.log(e.target.parentNode)
-            e.target.parentNode.parentNode.remove()
+            e.target.parentNode.remove()
         })
     }
     // open input for new words

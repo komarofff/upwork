@@ -154,7 +154,29 @@
                             class="py-2 px-3">Data Analytics</span></p>
 
                 </div>
-                <div class="w-11/12 mb-8">4</div>
+                <div class="w-11/12 mb-8 flex nowrap justify-start items-start text-sm">
+                    <div class="w-4/12 flex flex-col justify-start items-start">
+                        <p><span class="font-bold">Country:</span> USA</p>
+                        <p><span class="font-bold">Category:</span> Content & Copywriting</p>
+                        <p><span class="font-bold">Payment Verified:</span> Yes</p>
+                        <p><span class="font-bold">Jobs posted:</span> 84</p>
+
+                    </div>
+                    <div class="w-4/12 flex flex-col justify-start items-start">
+                        <p><span class="font-bold">Country:</span> USA</p>
+                        <p><span class="font-bold">Category:</span> Content & Copywriting</p>
+                        <p><span class="font-bold">Payment Verified:</span> Yes</p>
+                        <p><span class="font-bold">Jobs posted:</span> 84</p>
+                    </div>
+                    <div class="w-4/12 flex flex-col justify-start items-start">
+                        <p><span class="font-bold">Country:</span> USA</p>
+                        <p><span class="font-bold">Category:</span> Content & Copywriting</p>
+                        <p><span class="font-bold">Payment Verified:</span> Yes</p>
+                        <p><span class="font-bold">Jobs posted:</span> 84</p>
+                    </div>
+
+
+                </div>
                 <div class="w-11/12 mb-12">5</div>
                 <div class="w-full flex justify-end items-center">
                     <a href="#"
@@ -170,12 +192,10 @@
             </div>
 
 
-
-
-
         </div>
         <div class="w-2/12  relative">
-            <img class="cursor-pointer calendar-switcher absolute -left-4 top-1/2" src="images/arrow-right.svg" alt="arrow-right">
+            <img class="cursor-pointer calendar-switcher absolute -left-4 top-1/2" src="images/arrow-right.svg"
+                 alt="arrow-right">
             <div class="w-2/12  calendar min-h-screen bg-black text-white fixed top-0 right-0 z-20 ">
                 calendar
             </div>
@@ -184,7 +204,7 @@
     </div>
 </section>
 <script>
-    flag = true
+    let flag = true
     document.querySelector(".link-image").addEventListener("click", () => {
         if (flag) {
             document.querySelector('.dropdown').classList.remove('hidden')
@@ -209,26 +229,26 @@
     })
 
 
-    document.addEventListener("scroll",()=>{
-        if(pageYOffset>1){
+    document.addEventListener("scroll", () => {
+        if (pageYOffset > 1) {
             document.querySelector(".topmenu").classList.add("shadow-xl")
-        }else {
+        } else {
             document.querySelector(".topmenu").classList.remove("shadow-xl")
         }
     })
 
 
-    flag2 = true
+    let flag2 = true
     document.querySelector(".calendar-switcher").addEventListener("click", () => {
         if (flag2) {
             document.querySelector('.calendar').classList.add('hidden')
-            document.querySelector('.calendar-switcher').src='images/arrow-left.svg'
+            document.querySelector('.calendar-switcher').src = 'images/arrow-left.svg'
             document.querySelector('.calendar-switcher').classList.remove('-left-4')
             document.querySelector('.calendar-switcher').classList.add('right-0')
             flag2 = !flag2
         } else {
             document.querySelector('.calendar').classList.remove('hidden')
-            document.querySelector('.calendar-switcher').src='images/arrow-right.svg'
+            document.querySelector('.calendar-switcher').src = 'images/arrow-right.svg'
             document.querySelector('.calendar-switcher').classList.remove('right-0')
             document.querySelector('.calendar-switcher').classList.add('-left-4')
             flag2 = !flag2

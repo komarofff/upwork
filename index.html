@@ -225,6 +225,9 @@
             <button class="cursor-pointer hover:shadow-lg  bg-gray-200 text-black rounded py-3 px-4 font-normal mr-2 active-button">
                 United Arab Emirates
             </button>
+            <button class="cursor-pointer hover:shadow-lg  bg-gray-200 text-black rounded py-3 px-4 font-normal mr-2 ">
+                ...
+            </button>
         </div>
     </div>
     <div class="mb-8">
@@ -238,6 +241,9 @@
             </button>
             <button class="cursor-pointer hover:shadow-lg  bg-gray-200 text-black rounded py-3 px-4 font-normal mr-2 active-button">
                 CMS Customization
+            </button>
+            <button class="cursor-pointer hover:shadow-lg  bg-gray-200 text-black rounded py-3 px-4 font-normal mr-2 ">
+               ...
             </button>
         </div>
     </div>
@@ -254,12 +260,16 @@
             <button class="cursor-pointer hover:shadow-lg  bg-gray-200 text-black rounded py-3 px-4 font-normal mr-2 active-button">
                 Zend
             </button>
+            <button class="cursor-pointer hover:shadow-lg  bg-gray-200 text-black rounded py-3 px-4 font-normal mr-2 ">
+                ...
+            </button>
         </div>
     </div>
 
 
 </section>
 <script>
+ // top menu dropdown menu
     let flag = true
     document.querySelector(".link-image").addEventListener("click", () => {
         if (flag) {
@@ -271,7 +281,7 @@
         }
     })
 
-
+// search block show-hide input
     document.querySelector(".search").addEventListener("click", () => {
         document.querySelector('.search-input').classList.remove('hidden')
         document.querySelector('.search-button').classList.remove('hidden')
@@ -284,7 +294,7 @@
         document.querySelector('.search').classList.remove('hidden')
     })
 
-
+//top menu add shadow on scroll
     document.addEventListener("scroll", () => {
         if (pageYOffset > 1) {
             document.querySelector(".topmenu").classList.add("shadow-xl")
@@ -293,7 +303,7 @@
         }
     })
 
-
+// calendar on-off
     let flag2 = true
     document.querySelector(".calendar-switcher").addEventListener("click", () => {
         if (flag2) {
@@ -310,7 +320,7 @@
             flag2 = !flag2
         }
     })
-
+//// active buttons add-remove new class on click
     const activeButtons = document.querySelectorAll(".active-button")
     for (let i = 0; i < activeButtons.length; i++) {
         activeButtons[i].addEventListener("click", (e) => {

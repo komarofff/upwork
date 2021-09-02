@@ -197,13 +197,13 @@
 
 
         </div>
-        <div class="w-2/12  relative">
-            <img class="cursor-pointer calendar-switcher absolute -left-4 top-1/2" src="images/arrow-right.svg"
-                 alt="arrow-right">
-            <div class="w-2/12  calendar min-h-screen bg-black text-white fixed top-0 right-0 z-20 ">
-                calendar
-            </div>
+        <div class="w-2/12 calendar-block relative">
 
+            <div class="w-2/12  calendar min-h-screen bg-black text-white fixed top-0 right-0 z-20 ">
+               <div > calendar</div>
+            </div>
+            <img class="cursor-pointer calendar-switcher absolute -left-4 bottom-1/2" src="images/arrow-right.svg"
+                 alt="arrow-right">
         </div>
     </div>
 </section>
@@ -234,7 +234,7 @@
         <p class="text-lg font-bold text-black mb-3">Categories</p>
         <div class="flex wrap justify-start items-start">
             <button class="cursor-pointer hover:shadow-lg  bg-gray-200 text-black rounded py-3 px-4 font-normal mr-2 active-button">
-                All filters
+                All categories
             </button>
             <button class="cursor-pointer hover:shadow-lg  bg-gray-200 text-black rounded py-3 px-4 font-normal mr-2 active-button">
                 Project Management
@@ -244,6 +244,24 @@
             </button>
             <button class="cursor-pointer hover:shadow-lg  bg-gray-200 text-black rounded py-3 px-4 font-normal mr-2 ">
                ...
+            </button>
+        </div>
+    </div>
+
+    <div class="mb-8">
+        <p class="text-lg font-bold text-black mb-3">Filters</p>
+        <div class="flex wrap justify-start items-start">
+            <button class="cursor-pointer hover:shadow-lg  bg-gray-200 text-black rounded py-3 px-4 font-normal mr-2 active-button">
+                All filters
+            </button>
+            <button class="cursor-pointer hover:shadow-lg  bg-gray-200 text-black rounded py-3 px-4 font-normal mr-2 active-button">
+                Project Management
+            </button>
+            <button class="cursor-pointer hover:shadow-lg  bg-gray-200 text-black rounded py-3 px-4 font-normal mr-2 active-button">
+                CMS Customization
+            </button>
+            <button class="cursor-pointer hover:shadow-lg  bg-gray-200 text-black rounded py-3 px-4 font-normal mr-2 ">
+                ...
             </button>
         </div>
     </div>

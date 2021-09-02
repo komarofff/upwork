@@ -102,20 +102,21 @@
             </div>
             <div class="w-full my-12 flex justify-between items-center nowrap">
                 <div class="flex justify-start items-center nowrap">
-                    <a href="#" class="rounded rounded-full bg-gray-500 text-white py-3 px-4 hover:bg-gray-700 mr-7">Create
-                        Kit</a>
-                    <p class="bg-gray-200 text-black rounded py-3 px-2 font-normal mx-4 hover:bg-green-500 hover:text-white"><span
-                            class="py-2 px-3">Artem</span><span
-                            class="cursor-pointer py-2 px-3 border-l border-gray-400">...</span></p>
-                    <p class="bg-gray-200 text-black rounded py-3 px-2 font-normal mx-4 hover:bg-green-500 hover:text-white"><span
-                            class="py-2 px-3">Boris</span><span
-                            class="cursor-pointer py-2 px-3 border-l border-gray-400">...</span></p>
-                    <p class="bg-gray-200 text-black rounded py-3 px-2 font-normal mx-4 hover:bg-green-500 hover:text-white"><span
-                            class="py-2 px-3">Alena</span><span
-                            class="cursor-pointer py-2 px-3 border-l border-gray-400 ">...</span></p>
-                    <p class="bg-gray-200 text-black rounded py-3 px-2 font-normal mx-4 hover:bg-green-500 hover:text-white"><span
-                            class="py-2 px-3">Petr</span><span
-                            class="cursor-pointer py-2 px-3 border-l border-gray-400 ">...</span></p>
+                    <button class="rounded rounded-full bg-gray-500 text-white py-3 px-4 hover:bg-gray-700 mr-7">Create
+                        Kit
+                    </button>
+                    <button class="cursor-pointer bg-gray-200 text-black rounded  px-3 font-normal mr-6 hover:shadow-lg flex items-center ">
+                        <p class="mr-2">Artem</p>
+                        <p class="  py-3 pl-3  pr-1 border-l border-gray-400">...</p></button>
+                    <button class="cursor-pointer bg-gray-200 text-black rounded  px-3 font-normal mr-6 hover:shadow-lg flex items-center ">
+                        <p class="mr-2">Boris</p>
+                        <p class="  py-3 pl-3  pr-1 border-l border-gray-400">...</p></button>
+                    <button class="cursor-pointer bg-gray-200 text-black rounded  px-3 font-normal mr-6 hover:shadow-lg flex items-center ">
+                        <p class="mr-2">Alena</p>
+                        <p class="  py-3 pl-3  pr-1 border-l border-gray-400">...</p></button>
+                    <button class="cursor-pointer bg-gray-200 text-black rounded  px-3 font-normal mr-6 hover:shadow-lg flex items-center ">
+                        <p class="mr-2">Petr</p>
+                        <p class="  py-3 pl-3  pr-1  border-l border-gray-400">...</p></button>
                 </div>
                 <div class="flex nowrap"><input type="text"
                                                 class=" search-input hidden border rounded-lg border-gray-400 text-black p-2 mx-4 outline-none">
@@ -200,7 +201,7 @@
         <div class="w-2/12 calendar-block relative">
 
             <div class="w-2/12  calendar min-h-screen bg-black text-white fixed top-0 right-0 z-20 ">
-               <div > calendar</div>
+                <div> calendar</div>
             </div>
             <img class="cursor-pointer calendar-switcher absolute -left-4 bottom-1/2" src="images/arrow-right.svg"
                  alt="arrow-right">
@@ -213,7 +214,7 @@
         <p class="text-2xl text-black font-bold">Create Kit</p>
         <img class="close-kit" src="images/close.svg" alt="close">
     </div>
-    <div class="mb-8">
+    <div class="mb-14">
         <p class="text-lg font-bold text-black mb-3">Countries</p>
         <div class="flex wrap justify-start items-start">
             <button class="cursor-pointer hover:shadow-lg  bg-gray-200 text-black rounded py-3 px-4 font-normal mr-2 active-button">
@@ -230,7 +231,7 @@
             </button>
         </div>
     </div>
-    <div class="mb-8">
+    <div class="mb-14">
         <p class="text-lg font-bold text-black mb-3">Categories</p>
         <div class="flex wrap justify-start items-start">
             <button class="cursor-pointer hover:shadow-lg  bg-gray-200 text-black rounded py-3 px-4 font-normal mr-2 active-button">
@@ -243,12 +244,12 @@
                 CMS Customization
             </button>
             <button class="cursor-pointer hover:shadow-lg  bg-gray-200 text-black rounded py-3 px-4 font-normal mr-2 ">
-               ...
+                ...
             </button>
         </div>
     </div>
 
-    <div class="mb-8">
+    <div class="mb-14">
         <p class="text-lg font-bold text-black mb-3">Filters</p>
         <div class="flex wrap justify-start items-start">
             <button class="cursor-pointer hover:shadow-lg  bg-gray-200 text-black rounded py-3 px-4 font-normal mr-2 active-button">
@@ -266,7 +267,7 @@
         </div>
     </div>
 
-    <div class="mb-8">
+    <div class="mb-14">
         <p class="text-lg font-bold text-black mb-3">Technologies</p>
         <div class="flex wrap justify-start items-start">
             <button class="cursor-pointer hover:shadow-lg  bg-gray-200 text-black rounded py-3 px-4 font-normal mr-2 active-button font-bold">
@@ -284,10 +285,23 @@
         </div>
     </div>
 
+    <div class="mb-7">
+        <p class="text-lg font-bold text-black mb-3">Exception words</p>
+        <div class="flex wrap justify-start items-start">
+            <button class="cursor-pointer bg-gray-200 text-black rounded  px-3 font-normal mr-4 hover:shadow-lg flex items-center active-button">
+                <p class="mr-2">Artem</p>
+                <p class="  py-4 px-3  border-l-2 border-gray-400"><img src="images/close-little.svg" alt="close-little"></p></button>
+        </div>
+
+    </div>
+    <div class="mb-12">
+        <button class="rounded rounded-full bg-gray-500 text-white py-3 px-4 hover:bg-gray-700 ">+ Add</button>
+    </div>
+
 
 </section>
 <script>
- // top menu dropdown menu show-close
+    // top menu dropdown menu show-close
     let flag = true
     document.querySelector(".link-image").addEventListener("click", () => {
         if (flag) {
@@ -299,7 +313,7 @@
         }
     })
 
-// search block show-hide input
+    // search block show-hide input
     document.querySelector(".search").addEventListener("click", () => {
         document.querySelector('.search-input').classList.remove('hidden')
         document.querySelector('.search-button').classList.remove('hidden')
@@ -312,7 +326,7 @@
         document.querySelector('.search').classList.remove('hidden')
     })
 
-//top menu add shadow on scroll
+    //top menu add shadow on scroll
     document.addEventListener("scroll", () => {
         if (pageYOffset > 1) {
             document.querySelector(".topmenu").classList.add("shadow-xl")
@@ -321,7 +335,7 @@
         }
     })
 
-// calendar hide-show
+    // calendar hide-show
     let flag2 = true
     document.querySelector(".calendar-switcher").addEventListener("click", () => {
         if (flag2) {
@@ -338,17 +352,16 @@
             flag2 = !flag2
         }
     })
-//// active buttons add-remove new class on click
+    //// active buttons add-remove new class on click
     const activeButtons = document.querySelectorAll(".active-button")
     for (let i = 0; i < activeButtons.length; i++) {
         activeButtons[i].addEventListener("click", (e) => {
-            //console.log(e.target.classList)
-            if (e.target.classList.contains('bg-green-500') && e.target.classList.contains('text-white')) {
-                e.target.classList.remove('bg-green-500')
-                e.target.classList.remove('text-white')
+            if (e.currentTarget.classList.contains('bg-green-500') && e.currentTarget.classList.contains('text-white')) {
+                e.currentTarget.classList.remove('bg-green-500')
+                e.currentTarget.classList.remove('text-white')
             } else {
-                e.target.classList.add('bg-green-500')
-                e.target.classList.add('text-white')
+                e.currentTarget.classList.add('bg-green-500')
+                e.currentTarget.classList.add('text-white')
             }
         })
     }

@@ -630,12 +630,11 @@
 
     //kit dropdown show-close
     const dropKit = document.querySelectorAll('.dropdown-kit')
-    for(let i=0; i<dropKit.length;i++){
-        dropKit[i].addEventListener("click",(e)=>{
-
+    dropKit.forEach((val)=>{
+        val.addEventListener("click", (e) => {
             e.target.parentNode.parentNode.querySelector('.dropdown').classList.toggle('hidden')
         })
-    }
+    })
 
     // search block show-hide input
     document.querySelector(".search").addEventListener("click", () => {

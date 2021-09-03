@@ -30,7 +30,8 @@
         .calendar::-webkit-scrollbar {
             width: 0;
         }
-        .topmenu-width{
+
+        .topmenu-width {
             max-width: 1980px;
             left: 50%;
             transform: translateX(-50%);
@@ -115,18 +116,56 @@
                         Create
                         Kit
                     </button>
-                    <button class="cursor-pointer bg-gray-200 text-black rounded  px-3 font-normal mr-6 hover:shadow-lg flex items-center ">
-                        <p class="mr-2">Artem</p>
-                        <p class="  py-3 pl-3  pr-1 border-l border-gray-400">...</p></button>
-                    <button class="cursor-pointer bg-gray-200 text-black rounded  px-3 font-normal mr-6 hover:shadow-lg flex items-center ">
-                        <p class="mr-2">Boris</p>
-                        <p class="  py-3 pl-3  pr-1 border-l border-gray-400">...</p></button>
-                    <button class="cursor-pointer bg-gray-200 text-black rounded  px-3 font-normal mr-6 hover:shadow-lg flex items-center ">
-                        <p class="mr-2">Alena</p>
-                        <p class="  py-3 pl-3  pr-1 border-l border-gray-400">...</p></button>
-                    <button class="cursor-pointer bg-gray-200 text-black rounded  px-3 font-normal mr-6 hover:shadow-lg flex items-center ">
-                        <p class="mr-2">Petr</p>
-                        <p class="  py-3 pl-3  pr-1  border-l border-gray-400">...</p></button>
+                    <div class="relative">
+                        <button class="cursor-pointer bg-gray-200 text-black rounded  px-3 font-normal mr-6 hover:shadow-lg flex items-center ">
+                            <p class="mr-2">Artem</p>
+                            <p class="dropdown-kit  py-3 pl-3  pr-1 border-l border-gray-400">...</p></button>
+                        <div class="absolute top-10 -left-2 w-28 bg-white rounded-2xl shadow-2xl  dropdown text-right hidden">
+                            <ul class="p-4">
+                                <li class="my-2"><a class="hover:text-gray-400" href="#">Edit</a></li>
+                                <li><a class="hover:text-gray-400" href="#">Show</a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <button class="cursor-pointer bg-gray-200 text-black rounded  px-3 font-normal mr-6 hover:shadow-lg flex items-center ">
+                            <p class="mr-2">Boris</p>
+                            <p class="dropdown-kit  py-3 pl-3  pr-1 border-l border-gray-400">...</p></button>
+                        <div class="absolute top-10 -left-2 w-28 bg-white rounded-2xl shadow-2xl  dropdown text-right hidden">
+                            <ul class="p-4">
+                                <li class="my-2"><a class="hover:text-gray-400" href="#">Edit</a></li>
+                                <li><a class="hover:text-gray-400" href="#">Show</a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="relative">
+                        <button class="cursor-pointer bg-gray-200 text-black rounded  px-3 font-normal mr-6 hover:shadow-lg flex items-center ">
+                            <p class="mr-2">Olga</p>
+                            <p class="dropdown-kit  py-3 pl-3  pr-1 border-l border-gray-400">...</p></button>
+                        <div class="absolute top-10 -left-2 w-28 bg-white rounded-2xl shadow-2xl  dropdown text-right hidden">
+                            <ul class="p-4">
+                                <li class="my-2"><a class="hover:text-gray-400" href="#">Edit</a></li>
+                                <li><a class="hover:text-gray-400" href="#">Show</a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <button class="cursor-pointer bg-gray-200 text-black rounded  px-3 font-normal mr-6 hover:shadow-lg flex items-center ">
+                            <p class="mr-2">Petr</p>
+                            <p class="dropdown-kit  py-3 pl-3  pr-1 border-l border-gray-400">...</p></button>
+                        <div class="absolute top-10 -left-2 w-28 bg-white rounded-2xl shadow-2xl  dropdown text-right hidden">
+                            <ul class="p-4">
+                                <li class="my-2"><a class="hover:text-gray-400" href="#">Edit</a></li>
+                                <li><a class="hover:text-gray-400" href="#">Show</a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+
                 </div>
                 <div class="flex nowrap"><input type="text"
                                                 class=" search-input hidden border rounded-lg border-gray-400 text-black p-2 mx-4 outline-none">
@@ -465,7 +504,8 @@
             <button class="cursor-pointer hover:shadow-lg  bg-gray-200 text-black rounded py-3 px-4 font-normal mr-2 active-button">
                 United Arab Emirates
             </button>
-            <button class="cursor-pointer hover:shadow-lg  bg-gray-200 text-black rounded py-3 px-4 font-normal mr-2 ">
+            <button class="cursor-pointer hover:shadow-lg  bg-gray-200 text-black rounded py-3 px-4 font-normal mr-2 "
+                    title="Show more">
                 ...
             </button>
         </div>
@@ -482,7 +522,8 @@
             <button class="cursor-pointer hover:shadow-lg  bg-gray-200 text-black rounded py-3 px-4 font-normal mr-2 active-button">
                 CMS Customization
             </button>
-            <button class="cursor-pointer hover:shadow-lg  bg-gray-200 text-black rounded py-3 px-4 font-normal mr-2 " title="Show more">
+            <button class="cursor-pointer hover:shadow-lg  bg-gray-200 text-black rounded py-3 px-4 font-normal mr-2 "
+                    title="Show more">
                 ...
             </button>
         </div>
@@ -500,7 +541,8 @@
             <button class="cursor-pointer hover:shadow-lg  bg-gray-200 text-black rounded py-3 px-4 font-normal mr-2 active-button">
                 CMS Customization
             </button>
-            <button class="cursor-pointer hover:shadow-lg  bg-gray-200 text-black rounded py-3 px-4 font-normal mr-2 " title="Show more">
+            <button class="cursor-pointer hover:shadow-lg  bg-gray-200 text-black rounded py-3 px-4 font-normal mr-2 "
+                    title="Show more">
                 ...
             </button>
         </div>
@@ -518,7 +560,8 @@
             <button class="cursor-pointer hover:shadow-lg  bg-gray-200 text-black rounded py-3 px-4 font-normal mr-2 active-button">
                 Zend
             </button>
-            <button class="cursor-pointer hover:shadow-lg  bg-gray-200 text-black rounded py-3 px-4 font-normal mr-2 " title="Show more">
+            <button class="cursor-pointer hover:shadow-lg  bg-gray-200 text-black rounded py-3 px-4 font-normal mr-2 "
+                    title="Show more">
                 ...
             </button>
         </div>
@@ -572,7 +615,7 @@
     <div class="z-50 w-full fixed bottom-0 left-0 right-0 bg-green-400 text-white text-base p-8 flex justify-between items-center">
         <p> За последние 15 минут появилось 28 jobs
             <button class="rounded rounded-full bg-gray-300 text-black py-3 px-9 hover:bg-green-500 hover:text-white mx-7">
-               Update
+                Update
             </button>
         </p>
         <img class="cursor-pointer" src="images/close-white.svg" alt="close">
@@ -581,16 +624,18 @@
 <script>
 
     // top menu dropdown menu show-close
-    let flag = true
     document.querySelector(".link-image").addEventListener("click", () => {
-        if (flag) {
-            document.querySelector('.dropdown').classList.remove('hidden')
-            flag = !flag
-        } else {
-            document.querySelector('.dropdown').classList.add('hidden')
-            flag = !flag
-        }
+            document.querySelector('.dropdown').classList.toggle('hidden')
     })
+
+    //kit dropdown show-close
+    const dropKit = document.querySelectorAll('.dropdown-kit')
+    for(let i=0; i<dropKit.length;i++){
+        dropKit[i].addEventListener("click",(e)=>{
+
+            e.target.parentNode.parentNode.querySelector('.dropdown').classList.toggle('hidden')
+        })
+    }
 
     // search block show-hide input
     document.querySelector(".search").addEventListener("click", () => {
@@ -615,35 +660,19 @@
     })
 
     // calendar hide-show
-    let flag2 = true
     document.querySelector(".calendar-switcher").addEventListener("click", () => {
-        if (flag2) {
             document.querySelector('.calendar-block').classList.toggle('z-40')
-            document.querySelector('.calendar').classList.add('hidden')
+            document.querySelector('.calendar').classList.toggle('hidden')
             document.querySelector('.calendar-switcher').src = 'images/arrow-left.svg'
-            document.querySelector('.calendar-switcher').classList.remove('-ml-5')
-            document.querySelector('.calendar-switcher').classList.add('right-0')
+            document.querySelector('.calendar-switcher').classList.toggle('-ml-5')
+            document.querySelector('.calendar-switcher').classList.toggle('right-0')
             // add to top menu full width
             document.querySelector('.topmenu').classList.toggle('z-50')
-            document.querySelector('.topmenu').querySelector(".last-block").classList.remove('w-3/12')
-            document.querySelector('.topmenu').querySelector(".last-block").classList.add('w-0')
-            document.querySelector('.topmenu').querySelector(".user-block").classList.remove('w-5/12')
-            document.querySelector('.topmenu').querySelector(".user-block").classList.add('w-8/12')
-            flag2 = !flag2
-        } else {
-            document.querySelector('.calendar-block').classList.toggle('z-40')
-            document.querySelector('.calendar').classList.remove('hidden')
-            document.querySelector('.calendar-switcher').src = 'images/arrow-right.svg'
-            document.querySelector('.calendar-switcher').classList.remove('right-0')
-            document.querySelector('.calendar-switcher').classList.add('-ml-5')
-            // delete from top menu full width
-            document.querySelector('.topmenu').classList.toggle('z-50')
-            document.querySelector('.topmenu').querySelector(".last-block").classList.add('w-3/12')
-            document.querySelector('.topmenu').querySelector(".last-block").classList.remove('w-0')
-            document.querySelector('.topmenu').querySelector(".user-block").classList.add('w-5/12')
-            document.querySelector('.topmenu').querySelector(".user-block").classList.remove('w-8/12')
-            flag2 = !flag2
-        }
+            document.querySelector('.topmenu').querySelector(".last-block").classList.toggle('w-3/12')
+            document.querySelector('.topmenu').querySelector(".last-block").classList.toggle('w-0')
+            document.querySelector('.topmenu').querySelector(".user-block").classList.toggle('w-5/12')
+            document.querySelector('.topmenu').querySelector(".user-block").classList.toggle('w-8/12')
+
     })
     //// active buttons add-remove new class on click
     const activeButtons = document.querySelectorAll(".active-button")

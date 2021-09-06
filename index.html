@@ -2610,8 +2610,9 @@
 
 
             document.querySelector('.calendar-block').classList.toggle('z-40')
-
-            document.querySelector('.calendar-switcher').style.cssText='transform: rotate(0deg)'
+            setTimeout(() => {
+                document.querySelector('.calendar-switcher').style.cssText = 'transform: rotate(0deg)'
+            },280)
             document.querySelector('.calendar-switcher').classList.remove('right-4')
             document.querySelector('.calendar-switcher').classList.add('-ml-5')
             document.querySelector('.calendar-date').classList.toggle('hidden')

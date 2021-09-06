@@ -2570,12 +2570,16 @@
 
     // calendar hide-show
     document.querySelector(".calendar-switcher").addEventListener('mouseover', () => {
+        if (document.querySelector('.calendar').classList.contains('hidden') === false) {
             document.querySelector("#right-arrow-55").style.fill = "#4EA52F"
             // document.querySelector(".calendar-switcher").src='images/arrow-right-green.svg'
-
+        }
     })
     document.querySelector(".calendar-switcher").addEventListener('mouseout', () => {
+        if (document.querySelector('.calendar').classList.contains('hidden') === false) {
             document.querySelector("#right-arrow-55").style.fill = "black"
+            // document.querySelector(".calendar-switcher").src='images/arrow-right-green.svg'
+        }
     })
 
     let flag2 = true
@@ -2586,7 +2590,7 @@
             setTimeout(() => {
                 document.querySelector('.calendar').classList.add('hidden')
                 document.querySelector('.calendar-switcher').classList.add('right-4')
-                document.querySelector('.calendar-switcher').style.cssText='transform: rotate(180deg)'
+                document.querySelector('.calendar-switcher').src = 'images/arrow-left.svg'
             }, 280)
             document.querySelector('.calendar-block').classList.toggle('z-40')
 
@@ -2611,7 +2615,7 @@
 
             document.querySelector('.calendar-block').classList.toggle('z-40')
 
-            document.querySelector('.calendar-switcher').style.cssText='transform: rotate(0deg)'
+            document.querySelector('.calendar-switcher').src = 'images/arrow-right.svg'
             document.querySelector('.calendar-switcher').classList.remove('right-4')
             document.querySelector('.calendar-switcher').classList.add('-ml-5')
             document.querySelector('.calendar-date').classList.toggle('hidden')

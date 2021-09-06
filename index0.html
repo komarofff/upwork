@@ -56,26 +56,6 @@
             -webkit-transform: translateX(-50%);
             -moz-transform: translateX(-50%);
         }
-        @keyframes width0 {
-            0%{
-                width: content-box;
-
-            }
-            100%{
-                width: 0px;
-            }
-
-        }
-        @keyframes width100 {
-            0%{
-                width: 0px
-
-            }
-            100%{
-                width: content-box;
-            }
-
-        }
 
 
     </style>
@@ -2468,9 +2448,7 @@
     document.querySelector(".calendar-switcher").addEventListener("click", () => {
         if (flag2) {
             document.querySelector('.calendar-block').classList.toggle('z-40')
-            document.querySelector('.calendar-block').style.cssText = 'animation: width0 .2s linear;'
-            setTimeout(()=>{document.querySelector('.calendar').classList.add('hidden')},100)
-
+            document.querySelector('.calendar').classList.add('hidden')
             document.querySelector('.calendar-switcher').src = 'images/arrow-left.svg'
             document.querySelector('.calendar-switcher').classList.remove('-ml-5')
             document.querySelector('.calendar-switcher').classList.add('right-4')
@@ -2485,9 +2463,7 @@
             flag2 = !flag2
         } else {
             document.querySelector('.calendar-block').classList.toggle('z-40')
-            document.querySelector('.calendar-block').style.cssText = 'animation: width100 .2s linear;'
-            setTimeout(()=>{document.querySelector('.calendar').classList.remove('hidden')},100)
-
+            document.querySelector('.calendar').classList.remove('hidden')
             document.querySelector('.calendar-switcher').src = 'images/arrow-right.svg'
             document.querySelector('.calendar-switcher').classList.remove('right-4')
             document.querySelector('.calendar-switcher').classList.add('-ml-5')

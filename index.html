@@ -18,11 +18,13 @@
             max-width: 1980px;
             margin: 0 auto;
         }
-        button:hover{
-            transition:all .3s linear;
+
+        button:hover {
+            transition: all .3s linear;
         }
-        a:hover{
-            transition:all .3s linear;
+
+        a:hover {
+            transition: all .3s linear;
         }
 
         html {
@@ -32,14 +34,16 @@
             font-size: 16px;
             line-height: 19px;
         }
-        .day-to-day::-webkit-scrollbar{
+
+        .day-to-day::-webkit-scrollbar {
             -webkit-appearance: none;
-            width:0;
+            width: 0;
             scrollbar-width: none;
             /*IE10+*/
             -ms-overflow-style: -ms-autohiding-scrollbar;
             display: none;
         }
+
         .calendar::-webkit-scrollbar {
             -webkit-appearance: none;
             width: 0;
@@ -56,25 +60,71 @@
             -webkit-transform: translateX(-50%);
             -moz-transform: translateX(-50%);
         }
+
         @keyframes width0 {
-            0%{
+            0% {
                 width: content-box;
 
             }
-            100%{
+            100% {
                 width: 0px;
             }
 
         }
+
         @keyframes width100 {
-            0%{
+            0% {
                 width: 0px
 
             }
-            100%{
+            100% {
                 width: content-box;
             }
 
+        }
+
+        @media (min-width: 2000px) {
+            .calendar-date {
+                width: inherit;
+                margin-left: 6%;
+            }
+
+            .open-big-calendar {
+                margin-left: 5.7%;
+            }
+        }
+
+        @media (max-width: 1990px) {
+            .calendar-date {
+                width: inherit;
+                margin-left: 5%;
+            }
+
+            .open-big-calendar {
+                margin-left: 4.2%;
+            }
+        }
+
+        @media (max-width: 1535px) {
+            .calendar-date {
+                width: inherit;
+                margin-left: 7.7%;
+            }
+
+            .open-big-calendar {
+                margin-left: 7.2%;
+            }
+        }
+
+        @media (max-width: 1280px) {
+            .calendar-date {
+                width: inherit;
+                margin-left: 7.2%;
+            }
+
+            .open-big-calendar {
+                margin-left: 6.4%;
+            }
         }
 
 
@@ -291,8 +341,9 @@
 
 
             </div>
-            <div class="w-3/12 2xl:w-2/12 calendar-block relative min-h-full z-30" >
-                <div class="w-3/12 2xl:w-2/12  calendar  bg-black text-white fixed top-0  overflow-y-scroll  max-h-screen border border-black " style="width: inherit;">
+            <div class="w-3/12 2xl:w-2/12 calendar-block relative min-h-full z-30">
+                <div class="w-3/12 2xl:w-2/12  calendar  bg-black text-white fixed top-0  overflow-y-scroll  max-h-screen border border-black "
+                     style="width: inherit;">
                     <div class="slick-slider34 ">
                         <div>
                             <div class="rounded-lg bg-red-700 text-white text-base flex justify-between items-start mx-4 my-6 pt-3 pb-6 px-3 cursor-pointer to-delete relative">
@@ -523,14 +574,18 @@
                     </div>
 
                 </div>
-                <img class="cursor-pointer calendar-switcher fixed -ml-6 2xl:-ml-5 bottom-1/2 z-40" src="images/arrow-right.svg"
+                <img class="cursor-pointer calendar-switcher fixed -ml-6 2xl:-ml-5 bottom-1/2 z-40"
+                     src="images/arrow-right.svg"
                      alt="arrow-right">
 
                 <div class="fixed top-2 ml-1  w-full z-50 calendar-date">
-                    <button class="rounded rounded-full text-white text-lg py-3 px-6 bg-black bg-opacity-50">18 August</button>
+                    <button class="rounded rounded-full text-white text-lg py-3 px-6 bg-black bg-opacity-50">18 August
+                    </button>
                 </div>
                 <div class="fixed bottom-6 ml-1 w-full text-black  z-50 calendar-button">
-                    <button class="hover:bg-opacity-100 open-big-calendar rounded rounded-full text-white text-lg py-3 px-6 bg-gray-500 bg-opacity-80">All calendar</button>
+                    <button class="hover:bg-opacity-100 open-big-calendar rounded rounded-full text-white text-lg py-3 px-6 bg-gray-500 bg-opacity-80">
+                        All calendar
+                    </button>
                 </div>
 
             </div>
@@ -662,7 +717,8 @@
 
     <section id="big-calendar" class="z-50 hidden">
         <div class="w-full bg-black py-12 px-12 text-black z-50 min-h-screen  fixed top-0 left-0 right-0 ">
-            <div class="bg-gray-200 w-12/12 h-12/12 flex flex-col justify-start items-center px-2 pt-6 relative " style="max-height: 90vh;">
+            <div class="bg-gray-200 w-12/12 h-12/12 flex flex-col justify-start items-center px-2 pt-6 relative "
+                 style="max-height: 90vh;">
                 <img class="absolute right-6 top-6 cursor-pointer close-big-calendar" src="images/close.svg"
                      alt="close">
                 <div class="flex flex-row items-center justify-center">
@@ -925,7 +981,6 @@
                         </div>
 
 
-
                     </div>
                     <div data-name="day-2" class="overflow-y-visible max-h-full">
                         <div class="rounded-lg bg-red-700 text-white text-xs flex justify-between items-start my-3 pt-3 pb-6 px-3 cursor-pointer to-delete relative">
@@ -1168,7 +1223,6 @@
                                 Book me
                             </div>
                         </div>
-
 
 
                     </div>
@@ -1415,7 +1469,6 @@
                         </div>
 
 
-
                     </div>
                     <div data-name="day-4" class="overflow-y-visible max-h-full">
                         <div class="rounded-lg bg-red-700 text-white text-xs flex justify-between items-start my-3 pt-3 pb-6 px-3 cursor-pointer to-delete relative">
@@ -1658,7 +1711,6 @@
                                 Book me
                             </div>
                         </div>
-
 
 
                     </div>
@@ -1905,7 +1957,6 @@
                         </div>
 
 
-
                     </div>
                     <div data-name="day-6" class="overflow-y-visible max-h-full">
                         <div class="rounded-lg bg-red-700 text-white text-xs flex justify-between items-start my-3 pt-3 pb-6 px-3 cursor-pointer to-delete relative">
@@ -2148,7 +2199,6 @@
                                 Book me
                             </div>
                         </div>
-
 
 
                     </div>
@@ -2395,9 +2445,7 @@
                         </div>
 
 
-
                     </div>
-
 
 
                 </div>
@@ -2419,7 +2467,7 @@
 </div>
 <script>
     // open big calendar
-    document.querySelector('.open-big-calendar').addEventListener('click',()=>{
+    document.querySelector('.open-big-calendar').addEventListener('click', () => {
         document.getElementById('big-calendar').classList.toggle('hidden')
     })
     //close big-calendar
@@ -2467,9 +2515,13 @@
     let flag2 = true
     document.querySelector(".calendar-switcher").addEventListener("click", () => {
         if (flag2) {
-            document.querySelector('.calendar-block').classList.toggle('z-40')
+
             document.querySelector('.calendar-block').style.cssText = 'animation: width0 .2s linear;'
-            setTimeout(()=>{document.querySelector('.calendar').classList.add('hidden')},100)
+            setTimeout(() => {
+                document.querySelector('.calendar').classList.add('hidden')
+
+            }, 100)
+            document.querySelector('.calendar-block').classList.toggle('z-40')
 
             document.querySelector('.calendar-switcher').src = 'images/arrow-left.svg'
             document.querySelector('.calendar-switcher').classList.remove('-ml-5')
@@ -2484,9 +2536,13 @@
             document.querySelector('.topmenu').querySelector(".user-block").classList.add('w-8/12')
             flag2 = !flag2
         } else {
-            document.querySelector('.calendar-block').classList.toggle('z-40')
+
             document.querySelector('.calendar-block').style.cssText = 'animation: width100 .2s linear;'
-            setTimeout(()=>{document.querySelector('.calendar').classList.remove('hidden')},100)
+            setTimeout(() => {
+                document.querySelector('.calendar').classList.remove('hidden')
+
+            }, 100)
+            document.querySelector('.calendar-block').classList.toggle('z-40')
 
             document.querySelector('.calendar-switcher').src = 'images/arrow-right.svg'
             document.querySelector('.calendar-switcher').classList.remove('right-4')

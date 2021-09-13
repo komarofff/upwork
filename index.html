@@ -63,10 +63,17 @@
             -webkit-transform: translateX(-50%);
             -moz-transform: translateX(-50%);
         }
-        #take{
+
+        #take {
             width: 80vw;
+            max-width: 1200px;
             height: 90vh;
-            z-index:999;
+            z-index: 999;
+        }
+
+        .textarea-form {
+            min-height: 439px;
+            overflow-y: auto;
         }
 
         @keyframes width0 {
@@ -171,7 +178,8 @@
     <section class="container min-w-full mx-auto">
         <div class="container min-w-full flex justify-between">
             <div class="w-9/12 py-4 pl-6 pr-4 2xl:mr-0 mr-8 " style="padding-left: 5vw;">
-                <div class="w-full flex justify-between fixed top-0 left-0  z-30 bg-white pb-2 topmenu topmenu-width" style="padding-left: 5vw;">
+                <div class="w-full flex justify-between fixed top-0 left-0  z-30 bg-white pb-2 topmenu topmenu-width"
+                     style="padding-left: 5vw;">
                     <div class="w-4/12 flex justify-start items-start ">
                         <img class="relative mt-2 fill-current text-green-500" src="images/vasterra-logo.svg"
                              alt="vasterra-logo">
@@ -250,50 +258,62 @@
                         <div class="relative">
                             <div class=" bg-gray-200 text-black rounded  px-3 font-normal mr-6 hover:bg-green-500 hover:text-white  flex items-center ">
                                 <p class="mr-2">Artem</p>
-                                <button class="open-filters  py-3 pl-3  pr-1 border-l border-gray-400 cursor-pointer">...</button></div>
-<!--                            <div class="absolute top-10 -left-2 w-28 bg-white rounded-2xl shadow-2xl  dropdown text-right hidden">-->
-<!--                                <ul class="p-4">-->
-<!--                                    <li class="my-2"><a class="border-b-4 border-white  hover:border-green-500"-->
-<!--                                                        href="#">Edit</a></li>-->
-<!--                                    <li><a class="border-b-4 border-white  hover:border-green-500" href="#">Show</a>-->
-<!--                                    </li>-->
+                                <button class="open-filters  py-3 pl-3  pr-1 border-l border-gray-400 cursor-pointer">
+                                    ...
+                                </button>
+                            </div>
+                            <!--                            <div class="absolute top-10 -left-2 w-28 bg-white rounded-2xl shadow-2xl  dropdown text-right hidden">-->
+                            <!--                                <ul class="p-4">-->
+                            <!--                                    <li class="my-2"><a class="border-b-4 border-white  hover:border-green-500"-->
+                            <!--                                                        href="#">Edit</a></li>-->
+                            <!--                                    <li><a class="border-b-4 border-white  hover:border-green-500" href="#">Show</a>-->
+                            <!--                                    </li>-->
 
-<!--                                </ul>-->
-<!--                            </div>-->
+                            <!--                                </ul>-->
+                            <!--                            </div>-->
                         </div>
                         <div class="relative">
                             <div class=" bg-gray-200 text-black rounded  px-3 font-normal mr-6 hover:bg-green-500 hover:text-white  flex items-center ">
                                 <p class="mr-2">Boris</p>
-                                <button class="open-filters py-3 pl-3  pr-1 border-l border-gray-400 cursor-pointer">...</button></div>
-<!--                            <div class="absolute top-10 -left-2 w-28 bg-white rounded-2xl shadow-2xl  dropdown text-right hidden">-->
-<!--                                <ul class="p-4">-->
-<!--                                    <li class="my-2"><a class="border-b-4 border-white  hover:border-green-500"-->
-<!--                                                        href="#">Edit</a></li>-->
-<!--                                    <li><a class="border-b-4 border-white  hover:border-green-500" href="#">Show</a>-->
-<!--                                    </li>-->
+                                <button class="open-filters py-3 pl-3  pr-1 border-l border-gray-400 cursor-pointer">
+                                    ...
+                                </button>
+                            </div>
+                            <!--                            <div class="absolute top-10 -left-2 w-28 bg-white rounded-2xl shadow-2xl  dropdown text-right hidden">-->
+                            <!--                                <ul class="p-4">-->
+                            <!--                                    <li class="my-2"><a class="border-b-4 border-white  hover:border-green-500"-->
+                            <!--                                                        href="#">Edit</a></li>-->
+                            <!--                                    <li><a class="border-b-4 border-white  hover:border-green-500" href="#">Show</a>-->
+                            <!--                                    </li>-->
 
-<!--                                </ul>-->
-<!--                            </div>-->
+                            <!--                                </ul>-->
+                            <!--                            </div>-->
                         </div>
 
                         <div class="relative">
                             <div class=" bg-gray-200 text-black rounded  px-3 font-normal mr-6 hover:bg-green-500 hover:text-white  flex items-center ">
                                 <p class="mr-2">Olga</p>
-                                <button class="open-filters  py-3 pl-3  pr-1 border-l border-gray-400 cursor-pointer">...</button></div>
-<!--                            <div class="absolute top-10 -left-2 w-28 bg-white rounded-2xl shadow-2xl  dropdown text-right hidden">-->
-<!--                                <ul class="p-4">-->
-<!--                                    <li class="my-2"><a class="border-b-4 border-white  hover:border-green-500"-->
-<!--                                                        href="#">Edit</a></li>-->
-<!--                                    <li><a class="border-b-4 border-white  hover:border-green-500" href="#">Show</a>-->
-<!--                                    </li>-->
+                                <button class="open-filters  py-3 pl-3  pr-1 border-l border-gray-400 cursor-pointer">
+                                    ...
+                                </button>
+                            </div>
+                            <!--                            <div class="absolute top-10 -left-2 w-28 bg-white rounded-2xl shadow-2xl  dropdown text-right hidden">-->
+                            <!--                                <ul class="p-4">-->
+                            <!--                                    <li class="my-2"><a class="border-b-4 border-white  hover:border-green-500"-->
+                            <!--                                                        href="#">Edit</a></li>-->
+                            <!--                                    <li><a class="border-b-4 border-white  hover:border-green-500" href="#">Show</a>-->
+                            <!--                                    </li>-->
 
-<!--                                </ul>-->
-<!--                            </div>-->
+                            <!--                                </ul>-->
+                            <!--                            </div>-->
                         </div>
                         <div class="relative">
                             <div class="bg-gray-200 text-black rounded  px-3 font-normal mr-6 hover:bg-green-500 hover:text-white  flex items-center ">
                                 <p class="mr-2">Petr</p>
-                                <button class="open-filters   py-3 pl-3  pr-1 border-l border-gray-400 cursor-pointer ">...</button></div>
+                                <button class="open-filters   py-3 pl-3  pr-1 border-l border-gray-400 cursor-pointer ">
+                                    ...
+                                </button>
+                            </div>
                             <div class="absolute top-10 -left-2 w-28 bg-white rounded-2xl shadow-2xl  dropdown text-right hidden">
                                 <ul class="p-4">
                                     <li class="my-2"><a class="border-b-4 border-white  hover:border-green-500"
@@ -2603,9 +2623,120 @@
 
     </section>
 
-    <section id="take" class="space-x-4 fixed bg-white py-5 px-8 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 border border-gray-300 flex flex-nowrap justify-between items-start">
-        <div class="border border-red-500 w-full h-full">left</div>
-        <div class="border border-red-500 w-full h-full">right</div>
+    <section id="take"
+             class=" fixed bg-white py-5 px-8 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 border border-gray-300 flex flex-col justify-between items-end">
+        <div class="space-x-6 flex flex-nowrap justify-between items-start">
+            <div class="w-full h-full flex flex-col justify-start items-start">
+                <div class="w-full mb-4">
+                    <p class="text-xs pl-2 text-gray-300 mb-2">Organization</p>
+                    <select name="" id="" class="p-2 w-full border border-gray-300 rounded-md focus:outline-none">
+                        <option value="" selected>Vasterra</option>
+                        <option value="">Company name</option>
+                        <option value="">Company name</option>
+                    </select>
+                </div>
+                <div class="w-full mb-4">
+                    <p class="text-xs pl-2 text-gray-300 mb-2">Title</p>
+                    <select name="" id="" class="p-2 w-full border border-gray-300 rounded-md focus:outline-none">
+                        <option value="" selected>Mobile Desktop responsive UI UX redes</option>
+                        <option value="">Title2</option>
+                        <option value="">Title3</option>
+                    </select>
+                </div>
+                <div class="w-full mb-4">
+                    <p class="text-xs pl-2 text-gray-300 mb-2">Technologies</p>
+                    <select name="" id="" class="p-2 w-full border border-gray-300 rounded-md focus:outline-none">
+                        <option value="" selected><p class="bg-green-500">Laravel ×</p> <span>Vue ×</span>
+                            <span>PHP ×</span></option>
+                        <option value="">Title2</option>
+                        <option value="">Title3</option>
+                    </select>
+                </div>
+
+                <div class="w-full mb-4">
+                    <p class="text-xs pl-2 text-gray-300 mb-2">Owner</p>
+                    <select name="" id="" class="p-2 w-full border border-gray-300 rounded-md focus:outline-none">
+                        <option value="" selected>Artem M (You)</option>
+                        <option value="">Name2</option>
+                        <option value="">Name3</option>
+                    </select>
+                </div>
+                <div class="w-full mb-4">
+                    <p class="text-xs pl-2 text-gray-300 mb-2">Time of bid</p>
+                    <select name="" id="" class="p-2 w-full border border-gray-300 rounded-md focus:outline-none">
+                        <option value="" selected>15:15</option>
+                        <option value="">15:16</option>
+                        <option value="">15:17</option>
+                    </select>
+                </div>
+                <div class="w-full mb-4">
+                    <p class="text-xs pl-2 text-gray-300 mb-2">Time after job creation</p>
+                    <select name="" id="" class="p-2 w-full border border-gray-300 rounded-md focus:outline-none">
+                        <option value="" selected>15:45</option>
+                        <option value="">15:55</option>
+                        <option value="">17:45</option>
+                    </select>
+                </div>
+                <div class="w-full mb-4">
+                    <p class="text-xs pl-2 text-gray-300 mb-2">Bid profile</p>
+                    <select name="" id="" class="p-2 w-full border border-gray-300 rounded-md focus:outline-none">
+                        <option value="" selected>Artem Mazurchak</option>
+                        <option value="">Title2</option>
+                        <option value="">Title3</option>
+                    </select>
+                </div>
+                <div class="w-full mb-4">
+                    <p class="text-xs pl-2 text-gray-300 mb-2">Job posting</p>
+                    <select name="" id="" class="p-2 w-full border border-gray-300 rounded-md focus:outline-none">
+                        <option value="" selected>https://docs.google.com/document/d/1xxs</option>
+                        <option value="">Title2</option>
+                        <option value="">Title3</option>
+                    </select>
+                </div>
+            </div>
+            <div class="w-full h-full flex flex-col justify-start items-start">
+                <div class="w-full mb-4">
+                    <p class="text-xs pl-2 text-gray-300 mb-2">Task link</p>
+                    <select name="" id="" class="p-2 w-full border border-gray-300 rounded-md focus:outline-none">
+                        <option value="" selected>https://ac.vasterra.com/projects/663?modal=Taskс</option>
+                        <option value="">link 2</option>
+                        <option value="">link3</option>
+                    </select>
+                </div>
+                <div class="w-full mb-4">
+                    <p class="text-xs pl-2 text-gray-300 mb-2">Invite</p>
+                    <div class="space-x-3">
+                        <button class="px-3 py-2 bg-gray-200 rounded-sm text-base text-black hover:bg-green-500 hover:text-white">
+                            None
+                        </button>
+                        <button class="px-3 py-2 bg-green-500 rounded-sm text-base text-white hover:bg-gray-200 hover:text-black">
+                            Yes, invite
+                        </button>
+                    </div>
+                </div>
+                <div class="w-full mb-4">
+                    <p class="text-xs pl-2 text-gray-300 mb-2">Bid</p>
+                    <div class="space-x-3">
+                    <textarea name="" id=""
+                              class="textarea-form p-2 w-full h-full border border-gray-300 rounded-md focus:outline-non">
+Hi! I’d hope to create an Airbnb-like mobile app, as I built a counterpart of the Airbnb website and it was an amazing experience that I want to repeat with you.
+Here you can check this project we built with my team https://www.biz-cen.ru/. This platform is specifically designed for the office segment of commercial real estate.
+Visitors to the site can view a city’s commercial districts with a list of vacant premises including floor plans, and register for a preview directly online.
+You can see more information here https://vasterra.com/biz-cen.
+Yes, it was a web project, but of course I have strong expertise in mobile development. For example, here I worked on a Booking app for workplaces designed for Colliers International real estate company - https://play.google.com/store/apps/details?id=com.calcey.colliers&hl=en
+I’d like to go to the next stage and give you an estimation of your project, are there any other details that you can share?
+
+Best regards, Artem
+                    </textarea>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div>
+            <button class="">Cancel</button>
+            <button>Cancel</button>
+        </div>
     </section>
 
 </div>
@@ -2625,14 +2756,14 @@
     })
 
     //open-filters
-   const filterButton = document.querySelectorAll('.open-filters')
-    for(let x=0; x< filterButton.length;x++) {
+    const filterButton = document.querySelectorAll('.open-filters')
+    for (let x = 0; x < filterButton.length; x++) {
         filterButton[x].addEventListener("click", () => {
             document.getElementById('manager-filters').classList.toggle('hidden')
             document.getElementById('manager-filters').classList.add('z-50', 'absolute', 'top-0', 'left-0', 'right-0')
         })
     }
-    document.querySelector('.close-manager-filters').addEventListener("click",()=>{
+    document.querySelector('.close-manager-filters').addEventListener("click", () => {
         document.getElementById('manager-filters').classList.toggle('hidden')
         document.getElementById('manager-filters').classList.remove('z-50', 'absolute', 'top-0', 'left-0', 'right-0')
     })

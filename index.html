@@ -429,7 +429,7 @@
                     </div>
                     <div class="w-full flex justify-end items-center">
                         <a href="#"
-                           class="rounded rounded-full bg-gray-300 text-black py-3 px-9 hover:bg-green-500 hover:text-white mr-7">
+                           class="open-take rounded rounded-full bg-gray-300 text-black py-3 px-9 hover:bg-green-500 hover:text-white mr-7">
                             Take
                         </a>
                         <a href="#"
@@ -2638,7 +2638,7 @@
     </section>
 
     <section id="take"
-             class=" fixed bg-white py-5 px-8 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 border-2 border-gray-300 flex flex-col justify-between ">
+             class="hidden fixed bg-white py-5 px-8 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 border-2 border-gray-300 flex flex-col justify-between ">
         <div class="f-full space-x-6 flex flex-nowrap justify-between items-start ">
             <div class="w-full h-full flex flex-col justify-start items-start">
                 <div class="w-full mb-3">
@@ -2779,7 +2779,7 @@ Best regards, Artem
         </div>
         <div class="w-full h-full mt-4 flex justify-end items-start ">
             <div class="flex space-x-4">
-                <button class="rounded-full border border-gray-300 px-12 py-3 text-black hover:bg-green-500 hover:text-white hover:border-green-500">
+                <button class="close-take rounded-full border border-gray-300 px-12 py-3 text-black hover:bg-green-500 hover:text-white hover:border-green-500">
                     Cancel
                 </button>
                 <button class="rounded-full border border-green-500 bg-green-500 px-12 py-3 text-white hover:bg-white hover:text-black">
@@ -2791,6 +2791,14 @@ Best regards, Artem
 
 </div>
 <script>
+    // open modal take press
+    document.querySelector(".open-take").addEventListener("click",()=>{
+        document.getElementById("take").classList.remove('hidden')
+    })
+    //close modal press cancel
+    document.querySelector(".close-take").addEventListener("click",()=>{
+        document.getElementById("take").classList.add('hidden')
+    })
     //technologies menu open -- close
     document.querySelector(".open-drop-tech-menu").addEventListener("click", () => {
         document.querySelector(".open-drop-tech-menu").classList.toggle("rotate-180")

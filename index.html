@@ -87,7 +87,7 @@
         }
 
         .parent-tech {
-            min-height: 42px;
+            min-height: 45px;
         }
 
         @keyframes width0 {
@@ -2794,10 +2794,12 @@ Best regards, Artem
     // open modal take press
     document.querySelector(".open-take").addEventListener("click",()=>{
         document.getElementById("take").classList.remove('hidden')
+        document.querySelector(".container").classList.add('bg-white','opacity-40')
     })
     //close modal press cancel
     document.querySelector(".close-take").addEventListener("click",()=>{
         document.getElementById("take").classList.add('hidden')
+        document.querySelector(".container").classList.remove('bg-white','opacity-40')
     })
     //technologies menu open -- close
     document.querySelector(".open-drop-tech-menu").addEventListener("click", () => {

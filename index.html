@@ -77,8 +77,12 @@
             min-height: 405px;
             overflow-y: auto;
         }
-        .drop-menu-technologies{
+
+        .drop-menu-technologies {
             max-height: 345px;
+        }
+        .parent-tech{
+            min-height: 42px;
         }
 
         @keyframes width0 {
@@ -2650,26 +2654,40 @@
                 </div>
                 <div class="w-full mb-3 relative">
                     <p class="text-xs pl-2 text-gray-300 mb-1">Technologies</p>
-                    <div class="p-2 w-full border border-gray-300 rounded-md focus:outline-none  text-white flex justify-start items-center wrap space-x-2" >
-                        <p class="bg-green-500 p-1 rounded-sm cursor-pointer">Laravel ×</p>
-                        <p class="bg-yellow-400 p-1 rounded-sm cursor-pointer">Vue ×</p>
-                        <p class="bg-red-700 p-1 rounded-sm cursor-pointer">PHP ×</p>
+                    <div class="parent-tech p-2 w-full border border-gray-300 rounded-md focus:outline-none  text-white flex flex-wrap justify-start items-start wrap ">
+                        <p class="parent-button bg-green-500 p-1 rounded-sm cursor-pointer m-1">Laravel ×</p>
+                        <p class="parent-button bg-yellow-400 p-1 rounded-sm cursor-pointer m-1">Vue ×</p>
+                        <p class="parent-button  bg-red-700 p-1 rounded-sm cursor-pointer m-1">PHP ×</p>
                     </div>
-                    <img class="open-drop-tech-menu ml-1 mt-1 cursor-pointer absolute right-2 top-9 " src="images/arrow-down.svg" alt="arrow down">
-                    <ul class="overflow-y-auto hidden drop-menu-technologies  bg-white  w-full border border-gray-300 rounded-md focus:outline-none  text-white flex flex-col justify-start items-start wrap space-y-2 absolute top-20 right-0" >
-                        <li class=" w-full hover:bg-gray-100 py-1 pl-2 mt-1"><span class="bg-green-500 px-1 rounded-sm cursor-pointer ">Laravel</span> </li>
-                        <li class=" w-full hover:bg-gray-100 py-1 pl-2 mt-1"><span class="bg-yellow-400 px-1 rounded-sm cursor-pointer ">Vue</span> </li>
-                        <li class=" w-full hover:bg-gray-100 py-1 pl-2 mt-1"><span class="bg-red-700 px-1 rounded-sm cursor-pointer ">PHP</span> </li>
-                        <li class=" w-full hover:bg-gray-100 py-1 pl-2 mt-1"><span class="bg-green-500 px-1 rounded-sm cursor-pointer ">JavaScript</span> </li>
-                        <li class=" w-full hover:bg-gray-100 py-1 pl-2 mt-1"><span class="bg-yellow-400 px-1 rounded-sm cursor-pointer ">Bootstrap</span> </li>
-                        <li class=" w-full hover:bg-gray-100 py-1 pl-2 mt-1"><span class="bg-red-700 px-1 rounded-sm cursor-pointer ">TailWind</span> </li>
-                        <li class=" w-full hover:bg-gray-100 py-1 pl-2 mt-1"><span class="bg-green-500 px-1 rounded-sm cursor-pointer ">Laravel</span> </li>
-                        <li class=" w-full hover:bg-gray-100 py-1 pl-2 mt-1"><span class="bg-yellow-400 px-1 rounded-sm cursor-pointer ">Vue</span> </li>
-                        <li class=" w-full hover:bg-gray-100 py-1 pl-2 mt-1"><span class="bg-red-700 px-1 rounded-sm cursor-pointer ">PHP</span> </li>
-                        <li class=" w-full hover:bg-gray-100 py-1 pl-2 mt-1"><span class="bg-green-500 px-1 rounded-sm cursor-pointer ">JavaScript</span> </li>
-                        <li class=" w-full hover:bg-gray-100 py-1 pl-2 mt-1"><span class="bg-yellow-400 px-1 rounded-sm cursor-pointer ">Bootstrap</span> </li>
-                        <li class=" w-full hover:bg-gray-100 py-1 pl-2 mt-1"><span class="bg-red-700 px-1 rounded-sm cursor-pointer ">TailWind</span> </li>
+                    <ul class="overflow-y-auto hidden drop-menu-technologies  bg-white  w-full border border-gray-300 rounded-md focus:outline-none  text-white flex flex-col justify-start items-start wrap space-y-2 relative mt-4">
+                        <li class="tech-button w-full hover:bg-gray-100 py-2 pl-2 mt-1"><span
+                                class="bg-green-500 p-1 rounded-sm cursor-pointer ">Laravel</span></li>
+                        <li class="tech-button w-full hover:bg-gray-100 py-2 pl-2 mt-1"><span
+                                class="bg-yellow-400 p-1 rounded-sm cursor-pointer ">Vue</span></li>
+                        <li class="tech-button w-full hover:bg-gray-100 py-2 pl-2 mt-1"><span
+                                class="bg-red-700 p-1 rounded-sm cursor-pointer ">PHP</span></li>
+                        <li class="tech-button w-full hover:bg-gray-100 py-2 pl-2 mt-1"><span
+                                class="bg-green-500 p-1 rounded-sm cursor-pointer ">JavaScript</span></li>
+                        <li class="tech-button w-full hover:bg-gray-100 py-2 pl-2 mt-1"><span
+                                class="bg-yellow-400 p-1 rounded-sm cursor-pointer ">Bootstrap</span></li>
+                        <li class="tech-button w-full hover:bg-gray-100 py-2 pl-2 mt-1"><span
+                                class="bg-red-700 p-1 rounded-sm cursor-pointer ">TailWind</span></li>
+                        <li class="tech-button w-full hover:bg-gray-100 py-2 pl-2 mt-1"><span
+                                class="bg-green-500 p-1 rounded-sm cursor-pointer ">Laravel</span></li>
+                        <li class="tech-button w-full hover:bg-gray-100 py-2 pl-2 mt-1"><span
+                                class="bg-yellow-400 p-1 rounded-sm cursor-pointer ">Vue</span></li>
+                        <li class="tech-button w-full hover:bg-gray-100 py-2 pl-2 mt-1"><span
+                                class="bg-red-700 p-1 rounded-sm cursor-pointer ">PHP</span></li>
+                        <li class="tech-button w-full hover:bg-gray-100 py-2 pl-2 mt-1"><span
+                                class="bg-green-500 p-1 rounded-sm cursor-pointer ">JavaScript</span></li>
+                        <li class="tech-button w-full hover:bg-gray-100 py-2 pl-2 mt-1"><span
+                                class="bg-yellow-400 p-1 rounded-sm cursor-pointer ">Bootstrap</span></li>
+                        <li class="tech-button w-full hover:bg-gray-100 py-2 pl-2 mt-1"><span
+                                class="bg-red-700 p-1 rounded-sm cursor-pointer ">TailWind</span></li>
                     </ul>
+                    <img class="open-drop-tech-menu ml-1 mt-1 cursor-pointer absolute right-2 top-9 "
+                         src="images/arrow-down.svg" alt="arrow down">
+
                     </select>
                 </div>
 
@@ -2755,8 +2773,12 @@ Best regards, Artem
         </div>
         <div class="w-full h-full mt-4 flex justify-end items-start ">
             <div class="flex space-x-4">
-                <button class="rounded-full border border-gray-300 px-12 py-3 text-black hover:bg-green-500 hover:text-white hover:border-green-500">Cancel</button>
-                <button class="rounded-full border border-green-500 bg-green-500 px-12 py-3 text-white hover:bg-white hover:text-black">Save</button>
+                <button class="rounded-full border border-gray-300 px-12 py-3 text-black hover:bg-green-500 hover:text-white hover:border-green-500">
+                    Cancel
+                </button>
+                <button class="rounded-full border border-green-500 bg-green-500 px-12 py-3 text-white hover:bg-white hover:text-black">
+                    Save
+                </button>
             </div>
         </div>
     </section>
@@ -2764,10 +2786,35 @@ Best regards, Artem
 </div>
 <script>
     //technologies menu open -- close
-    document.querySelector(".open-drop-tech-menu").addEventListener("click",()=>{
+    document.querySelector(".open-drop-tech-menu").addEventListener("click", () => {
         document.querySelector(".open-drop-tech-menu").classList.toggle("rotate-180")
         document.querySelector(".open-drop-tech-menu").classList.toggle("transform")
         document.querySelector(".drop-menu-technologies").classList.toggle('hidden')
+    })
+    // technologies select
+    // var parButtons = document.querySelectorAll(".parent-button")
+
+    const techArr = document.querySelectorAll('.tech-button')
+    for (let i = 0; i < techArr.length; i++) {
+        techArr[i].addEventListener("click", (e) => {
+            let dopClass = e.currentTarget.getElementsByTagName('span')[0].classList[0]
+            let text = e.currentTarget.getElementsByTagName('span')[0].innerHTML
+            let newTechToList = document.createElement('p')
+            newTechToList.classList.add('p-1', 'rounded-sm', 'm-1', 'cursor-pointer', 'parent-button', dopClass)
+            newTechToList.innerHTML = `${text} ×`
+            document.querySelector(".parent-tech").append(newTechToList)
+            parButtons = document.querySelectorAll(".parent-button")
+        })
+    }
+    document.querySelector(".parent-tech").addEventListener("click", (e) => {
+        if (e.target.classList.contains("parent-button")) {
+
+            e.target.classList.add('need-to-delete')
+            setTimeout(()=>{
+                document.querySelector(".need-to-delete").remove()
+            },40)
+
+        }
     })
 
     // open big calendar
@@ -2792,6 +2839,7 @@ Best regards, Artem
             document.getElementById('manager-filters').classList.add('z-50', 'absolute', 'top-0', 'left-0', 'right-0')
         })
     }
+
     document.querySelector('.close-manager-filters').addEventListener("click", () => {
         document.getElementById('manager-filters').classList.toggle('hidden')
         document.getElementById('manager-filters').classList.remove('z-50', 'absolute', 'top-0', 'left-0', 'right-0')
